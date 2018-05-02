@@ -1,0 +1,8 @@
+# Directories
+**/fsb
+**/old
+
+# Files
+*.log
+*.exe
+*.o

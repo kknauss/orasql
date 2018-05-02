@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+cp -p sqldp.c ../old/sqldp.c.`date +"%Y%m%d_%H%M%S"`

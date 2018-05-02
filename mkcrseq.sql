@@ -1,0 +1,14 @@
+select	'create sequence '|| 
+	SEQUENCE_OWNER  || '.' ||
+	SEQUENCE_NAME   ||
+' START WITH '|| LAST_NUMBER ||
+' INCREMENT BY ' || INCREMENT_BY  ||
+' MINVALUE ' || MIN_VALUE ||
+' MAXVALUE ' || MAX_VALUE ||
+CASE CYCLE_FLAG WHEN 'Y' THEN ' CYCLE' ELSE ' NOCYCLE' END ||
+CASE ORDER_FLAG WHEN 'Y' THEN ' ORDER' ELSE ' NOORDER' END ||
+CASE CACHE_SIZE WHEN  0  THEN ' NOCACHE' ELSE ' CACHE '||CACHE_SIZE END ||
+';'
+from dba_sequences
+where SEQUENCE_OWNER = upper('&&seqown')
+and SEQUENCE_NAME   = upper('&&seqname');

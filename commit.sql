@@ -1,0 +1,3 @@
+pause Press ENTER to commit ...
+
+commit;
