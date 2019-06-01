@@ -4,7 +4,7 @@ column holder_sid         format 999999 heading 'Holder|SID';
 column holder_serial#     format 999999 heading 'Holder|Serial#';
 column holder_grant_time  format 999999 heading 'Holder|Grant|Time (s)';
 column holder_lmode                     heading 'Holder|Lock Mode';
-column holder_machine     format    a24 heading 'Holder|Machine';
+column holder_machine     format    a32 heading 'Holder|Machine';
 column holder_lock_type   format    a20 heading 'Holder|Lock|Type';
 column killcmd            format    a55 heading 'Kill Command (sid,serial#,inst)';
 
@@ -13,7 +13,7 @@ column waiter_inst        format     09 heading 'Waiter|Inst ID';
 column waiter_sid         format 999999 heading 'Waiter|SID';
 column waiter_lmode                     heading 'Waiter|Requested|Lock Mode';
 column waiter_grant_time  format 999999 heading 'Waiter|Grant|Time (s)';
-column waiter_machine     format    a24 heading 'Waiter|Machine';
+column waiter_machine     format    a32 heading 'Waiter|Machine';
 
 select
 c.prev_sql_id,

@@ -1,7 +1,7 @@
 column new_pass new_value newpass;
 
 set termout off;
-select lower ( 'kk' || to_char(sysdate,'mmdd') || substr('&&username',1,2) ) new_pass from dual;
+select initcap ( lower ( '"Kk' || to_char(sysdate,'mmdd') || substr('&&username',1,2) || '!"' ) ) new_pass from dual;
 set verify on;
 set termout on;
 

@@ -1,5 +1,5 @@
 set pagesize 1024;
-set linesize 132;
+set linesize 155;
 set verify off;
 column object_name format a32;
 column status format a10;

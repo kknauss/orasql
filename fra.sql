@@ -12,7 +12,8 @@ column free_gb        heading 'Free|GB';
 select
 	NAME,
 	round(TOTAL_MB/(1024), 2) as total_gb,
-	round(FREE_MB /(1024), 2) as free_gb
+	round(FREE_MB /(1024), 2) as free_gb,
+	(total_mb-free_mb) / total_mb as used_pct
 from v$asm_diskgroup;
 
 
@@ -39,7 +40,9 @@ select
         round((space_limit-space_used)       /(1024*1024), 2) as free_mb,
         round(space_reclaimable/(1024*1024), 2) as reclaimable_mb,
         number_of_files,
-        round(space_reclaimable/space_limit*100,2)||'%' as pct_reclaimable
+	round(space_used/space_limit*100,2) 			as pct_used,
+        round(space_reclaimable/space_limit*100,2)		as pct_reclaimable,
+	round((space_used-space_reclaimable)/space_limit*100,2)	as pct_used_effective
 from v$recovery_file_dest;
 
 

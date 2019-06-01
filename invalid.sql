@@ -1,4 +1,5 @@
 column owner format a18;
+column name format a36;
 column object_name format a32;
 column status format a7;
 column text format a100; 

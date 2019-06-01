@@ -8,7 +8,7 @@ column file_name format a50;
 column tablespace_name format a22;
 column bytes format 99999999999
 column sizeGB format 990.99
-column sizeMB format 9999990.99
+column sizeMB format 999999990.99
 column ut NOPRINT new_value uppertbspc;
 
 select upper('&&tbspace') ut from dual;

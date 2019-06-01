@@ -5,7 +5,7 @@ column opname      format a35 heading 'operation';
 column target      format a40 heading 'target';
 column username    format a26 heading 'username';
 column event       format a28;
-column elap_remain format a12 heading 'elapsed/|remain (s)';
+column elap_remain format a14 heading 'elapsed/|remain (s)';
 column machine     format a24;
 column sofar       format 999999999 heading 'blocks|processed';
 column totalwork   format 999999999 heading 'total|blocks';

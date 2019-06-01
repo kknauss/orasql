@@ -1,6 +1,5 @@
 select sum(bytes) / (1024*1024*1024) DB_SIZE_GB
 from (
-
 SELECT 
 	name,
 	(block_size*file_size_blks) bytes
@@ -23,5 +22,4 @@ SELECT
         bytes
 FROM
         dba_temp_files
-
 );

@@ -1,3 +1,4 @@
+COLUMN OWNER FORMAT a24
 COMPUTE SUM LABEL 'Total' OF cnt ON report;
 
 break on report;

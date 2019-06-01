@@ -1,6 +1,6 @@
 column inst_id_loc	format a4	heading 'Inst|ID' JUSTIFY RIGHT;
 column instance_name	format a13	heading 'Instance Name';
-column host_name	format a12	heading 'Hostname';
+column host_name	format a18	heading 'Hostname';
 column status		format a8	heading 'Status';
 column instance_number			heading 'Instance|Number';
 column thread#				heading 'Thread#';

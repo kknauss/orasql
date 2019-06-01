@@ -4,7 +4,7 @@ DECLARE
   fhandle UTL_FILE.FILE_TYPE;
   line    VARCHAR2(32767);
 BEGIN
-  fhandle := UTL_FILE.FOPEN(location=>'LPS_FTP_DIR', filename=>'ktk3.txt', open_mode=>'w');
+  fhandle := UTL_FILE.FOPEN(location=>'UTL_DIR', filename=>'ktk3.txt', open_mode=>'w');
 
   UTL_FILE.putf(fhandle, 'I am so smart...\n');
   UTL_FILE.putf(fhandle, 'I am so smart...\n');

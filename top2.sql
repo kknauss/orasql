@@ -15,12 +15,10 @@ column status          format  a8 heading 'Status';
            machine,
            last_call_et,
            sid,
-           serial#, sql_id, status,
-           event, wait_class, wait_time, seconds_in_wait, sql_child_number, SQL_HASH_VALUE
+           serial#, sql_id, sql_child_number, sql_address, SQL_HASH_VALUE, status, event, wait_class, wait_time, seconds_in_wait
     FROM   gv$session
---WHERE wait_class != 'Idle'
 WHERE status = 'ACTIVE'
- AND username = 'DM_OBIEE_APPID'
---  AND username <> 'SYS'
-ORDER BY   last_call_et DESC; 
-
+AND username IS NOT NULL
+and upper(wait_class) <> 'IDLE'
+and wait_class != 'Idle'
+ORDER BY   last_call_et DESC;

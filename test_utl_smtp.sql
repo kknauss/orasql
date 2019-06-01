@@ -2,8 +2,9 @@ DECLARE
   v_From      VARCHAR2(80) := 'kknauss@flagstar.com';
   v_Recipient VARCHAR2(80) := 'kknauss@flagstar.com';
   v_Subject   VARCHAR2(80) := 'test subject';
---v_Mail_Host VARCHAR2(30) := 'intrelay.flagstar.com';
-  v_Mail_Host VARCHAR2(30) := 'fssmtp.flagstar.com';
+v_Mail_Host VARCHAR2(30) := 'fs_conv.flagstar.com';
+ --v_Mail_Host VARCHAR2(30) := 'intrelay.flagstar.com';
+--  v_Mail_Host VARCHAR2(30) := 'fssmtp.flagstar.com';
   v_Mail_Conn utl_smtp.Connection;
   crlf        VARCHAR2(2)  := chr(13)||chr(10);
 BEGIN
